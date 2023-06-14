@@ -20,7 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-//#define USE_MATRIX_I2C
+// #define USE_MATRIX_I2C
 
 /* Select hand configuration */
 
@@ -28,28 +28,27 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define MASTER_RIGHT
 // #define EE_HANDS
 
-//#define USE_SERIAL_PD2
-//#undef USE_I2C
+// #define USE_SERIAL_PD2
+// #undef USE_I2C
 #define SELECT_SOFT_SERIAL_SPEED 1
 
-#define TAPPING_TERM 300
+#define TAPPING_TERM 200
 #define TAPPING_TOGGLE 2
-#define IGNORE_MOD_TAP_INTERRUPT
-#define PERMISSIVE_HOLD
+// #define PERMISSIVE_HOLD
 
 #ifdef RGBLIGHT_ENABLE
-    #undef RGBLED_NUM
-    #define RGBLIGHT_ANIMATIONS
-    #define RGBLED_NUM 27
-    #define RGBLIGHT_LIMIT_VAL 120
-    #define RGBLIGHT_HUE_STEP 10
-    #define RGBLIGHT_SAT_STEP 17
-    #define RGBLIGHT_VAL_STEP 17
+#    undef RGBLED_NUM
+#    define RGBLIGHT_ANIMATIONS
+#    define RGBLED_NUM 27
+#    define RGBLIGHT_LIMIT_VAL 120
+#    define RGBLIGHT_HUE_STEP 10
+#    define RGBLIGHT_SAT_STEP 17
+#    define RGBLIGHT_VAL_STEP 17
 #endif
 
 #ifdef RGB_MATRIX_ENABLE
-    #define RGB_MATRIX_FRAMEBUFFER_EFFECTS
-    #define RGB_MATRIX_KEYPRESSES
+#    define RGB_MATRIX_FRAMEBUFFER_EFFECTS
+#    define RGB_MATRIX_KEYPRESSES
 #    define DISABLE_RGB_MATRIX_ALPHAS_MODS
 #    define DISABLE_RGB_MATRIX_GRADIENT_UP_DOWN
 #    define DISABLE_RGB_MATRIX_BREATHING
