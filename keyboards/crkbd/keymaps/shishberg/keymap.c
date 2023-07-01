@@ -45,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_NO, KC_Q, KC_W, KC_F, KC_P, KC_B, /* */ KC_J, KC_L, KC_U, KC_Y, KC_SCLN, KC_NO,
     KC_Q, LCTL_T(KC_A), LALT_T(KC_R), LSFT_T(KC_S), LGUI_T(KC_T), KC_G, /* */ KC_M, RGUI_T(KC_N), RSFT_T(KC_E), RALT_T(KC_I), RCTL_T(KC_O), KC_SCLN,
     KC_NO, KC_Z, LT(3, KC_X), LT(2, KC_C), LT(1, KC_D), KC_V, /* */ KC_K, LT(1, KC_H), LT(2, KC_COMM), LT(3, KC_DOT), KC_SLSH, KC_NO,
-    KC_ESC, LT(4, KC_TAB), KC_SPC, /* */ KC_ENT, KC_BSPC, KC_NO),
+    LT(4, KC_ESC), LT(5, KC_TAB), KC_SPC, /* */ KC_ENT, KC_BSPC, LT(4, KC_DEL)),
 	[1] = LAYOUT_split_3x6_3(
     KC_NO, KC_VOLU, KC_HOME, KC_UP, KC_END, KC_PGUP, /* */ KC_GRV, KC_7, KC_8, KC_9, KC_MINS, KC_NO,
     KC_NO, KC_NO, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, /* */ KC_PLUS, KC_4, KC_5, KC_6, KC_QUOT, KC_MINS,
@@ -55,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, /* */ KC_TILD, KC_LCBR, KC_RCBR, KC_AMPR, KC_UNDS, KC_NO,
     KC_NO, KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC, /* */ KC_CIRC, KC_LPRN, KC_RPRN, KC_ASTR, KC_DQUO, KC_UNDS,
     KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, /* */ KC_NO, KC_LBRC, KC_RBRC, KC_NO, KC_PIPE, KC_NO,
-    KC_NO, TO(0), KC_TRNS, /* */ KC_TRNS, KC_DEL, KC_NO),
+    KC_NO, TO(0), KC_TRNS, /* */ KC_TRNS, KC_TRNS, KC_NO),
 	[3] = LAYOUT_split_3x6_3(
     KC_NO, KC_NO, KC_BTN2, KC_MS_U, KC_BTN1, KC_WH_U, /* */ KC_NO, KC_F7, KC_F8, KC_F9, KC_F10, KC_NO,
     KC_NO, KC_NO, KC_MS_L, KC_MS_D, KC_MS_R, KC_WH_D, /* */ KC_NO, KC_F4, KC_F5, KC_F6, KC_F11, KC_F10,
@@ -63,9 +63,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_NO, TO(0), KC_TRNS, /* */ KC_TRNS, KC_TRNS, KC_NO),
 	[4] = LAYOUT_split_3x6_3(
     KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, /* */ KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+    KC_NO, KC_LCTL, KC_LALT, KC_LSFT, KC_LGUI, KC_NO, /* */ KC_NO, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_NO,
+    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, /* */ KC_NO, KC_HOME, KC_PGDN, KC_PGUP, KC_END, KC_NO,
+    KC_NO, TO(0), KC_TRNS, /* */ KC_TRNS, KC_TRNS, KC_NO),
+	[5] = LAYOUT_split_3x6_3(
+    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, /* */ KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
     KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, /* */ KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
     KC_NO, KC_NO, TO(3), TO(2), TO(1), KC_NO, /* */ KC_NO, TO(1), TO(2), TO(3), KC_NO, KC_NO,
-    KC_NO, KC_TRNS, KC_TRNS, /* */ KC_TRNS, KC_TRNS, KC_NO)
+    TO(4), KC_NO, KC_TRNS, /* */ KC_TRNS, KC_TRNS, TO(4))
 };
 
 #ifdef OLED_DRIVER_ENABLE
